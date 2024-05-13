@@ -1,0 +1,8 @@
+/* 全局样式定制 */
+/* :root:root {
+  --adm-color-primary: #a062d4;
+} */
+/* 局部样式定制 */
+.purple-theme {
+  --adm-color-primary: #a062d4;
+}

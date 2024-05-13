@@ -2,7 +2,7 @@
 
 ## 路径解析配置
 
-1.安装craco
+1.安装 craco
 
 `npm i -D @craco/craco`
 
@@ -14,7 +14,7 @@
 
 4.包文件中配置启动和打包命令
 
-## vscode的联想路径配置（vscode会自动读取配置帮助我们自动联想提示）
+## vscode 的联想路径配置（vscode 会自动读取配置帮助我们自动联想提示）
 
 1.根目录下新增配置文件
 
@@ -22,16 +22,34 @@
 
 2.添加路径提示配置
 
-## 数据Mock
+## 数据 Mock
 
 `json-server`工具
 
-1.项目中安装json-server
+1.项目中安装 json-server
 
 `npm i -D json-server`
 
-2.准备一个json文件
+2.准备一个 json 文件
 
 3.添加启动命令
 
+### antd-mobile
 
+#### 全局定制：整个应用范围内的组件都生效
+
+:root:root {
+--adm-color-primary: #a062d4;
+}
+
+#### 局部定制：只在某些元素内部的组件生效
+
+.purple-theme {
+--adm-color-primary: #a062d4;
+}
+
+## 命令合并
+
+"start": "craco start && npm run server"
+
+## 使用 antD 的 TabBar 标签栏组件进行布局以及路由的切换
