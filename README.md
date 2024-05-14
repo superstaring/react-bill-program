@@ -42,14 +42,20 @@
 --adm-color-primary: #a062d4;
 }
 
+`<Button color="primary">全局样式定制</Button>`
+
 #### 局部定制：只在某些元素内部的组件生效
 
 .purple-theme {
 --adm-color-primary: #a062d4;
 }
 
+    <div className="purple-theme">
+      <Button color="primary">局部样式定制</Button>
+    </div>
+
 ## 命令合并
 
-"start": "craco start && npm run server"
+"start": "craco start & npm run server"
 
 ## 使用 antD 的 TabBar 标签栏组件进行布局以及路由的切换
