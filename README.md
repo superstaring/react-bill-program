@@ -59,3 +59,7 @@
 "start": "craco start & npm run server"
 
 ## 使用 antD 的 TabBar 标签栏组件进行布局以及路由的切换
+
+`npm install -D sass`
+
+##
