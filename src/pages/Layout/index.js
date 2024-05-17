@@ -1,4 +1,4 @@
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getBillList } from "@/store/modules/billStore";
 import React, { useState, useEffect } from "react";
@@ -12,11 +12,17 @@ import {
 import "./index.scss";
 
 const Layout = () => {
-  const [activeKey, setActiveKey] = useState("/month");
+  const [activeKey, setActiveKey] = useState("/");
   const dispatch = useDispatch();
+  const location = useLocation();
 
   useEffect(() => {
     dispatch(getBillList());
+
+    if (location?.pathname !== '/') {
+      navigate(location.pathname);
+      setActiveKey(location.pathname);
+    }
   }, [dispatch]);
 
   const navigate = useNavigate();
@@ -27,7 +33,7 @@ const Layout = () => {
 
   const tabs = [
     {
-      key: "/month",
+      key: "/",
       title: "月度账单",
       icon: <AppOutline />,
       badge: Badge.dot,

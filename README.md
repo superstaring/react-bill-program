@@ -62,4 +62,11 @@
 
 `npm install -D sass`
 
-##
+## 按月进行分组
+
+`npm install lodash`
+
+    import _ from "lodash";
+    const monthGroup = useMemo(() => {
+      return _.groupBy(billList, (item) => dayjs(item.date).format('YYYY-MM'))
+    }, [billList])
